@@ -6,6 +6,8 @@ import { useState } from "react";
 
 
 function Main() {
+    const [counter, setCounter] = useState(0)
+
 
     return (
     

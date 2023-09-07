@@ -1,10 +1,7 @@
 import refreshImg from '../assets/image/refresh 1.png'
-import { useState } from "react";
 
 
-function Buttons({}) {
-
-    const [counter, setCounter] = useState(0)
+function Buttons({counter, setCounter}) {
 
     function plus(){
         setCounter(counter + 3)
