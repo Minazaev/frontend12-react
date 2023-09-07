@@ -55,38 +55,40 @@ code {
 }
 
 .btn-plus{
-  /* position: absolute; */
   width: 56px;
   height: 58px;
   border-radius: 27px;
   background: #0FC50B;
 }
 
-.btn__values{
-  /* position: relative; */
-  display: block;
-  color: #FFF;
-  text-align: center;
-  font-size: 45px;
+.btn-plus__values{
+  width: 56px;
+  height: 58px;
+  border-radius: 27px;
+  background: #68f64c;
+  font-size: 35px;
+  color: white;
 }
 
 .btn-refresh{
   width: 55px;
   height: 58px;
   border-radius: 27px;
-  background: #E5E5E5;
 }
 
 .btn-refresh img{
   display: block;
-  margin: 13px;
+
+  margin: auto;
 }
 
-.btn-minus{
+.btn-minus__values{
   width: 56px;
   height: 58px;
   border-radius: 27px;
   background: #F64C4C;
+  font-size: 35px;
+  color: white;
 }
 
 .footer-logo{

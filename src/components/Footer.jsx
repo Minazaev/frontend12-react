@@ -7,9 +7,9 @@ function Footer() {
     return (
         <div className="container">
             <div className="footer-content">
-                <FooterLogo></FooterLogo>
-                <About></About>
-                <Copyright></Copyright>
+                <FooterLogo/>
+                <About/>
+                <Copyright/>
             </div>
         </div>
     );

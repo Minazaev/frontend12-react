@@ -1,12 +1,16 @@
 import Number from "../components/Number";
 import Buttons from '../components/Buttons';
 
+import { useState } from "react";
+
 
 function Main() {
+
     return (
+    
         <div>
-            <Number></Number>
-            <Buttons></Buttons>
+            <Number counter = {counter}/>
+            <Buttons counter={counter} setCounter={setCounter}/>
         </div>
     );
   }
