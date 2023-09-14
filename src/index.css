@@ -12,124 +12,20 @@ code {
     monospace;
 }
 
-.container{
-  max-width: 1000px;
-  margin: auto;
-}
+/*  */
 
-.menu{
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  list-style: none;
-}
-
-.menu a{
-  text-decoration: none;
-  color: #393939;
-  font-size: 24px;
-}
-
-.header{
-  display: flex;
-  justify-content: space-between;
-  align-items:center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.main{
-  margin: auto;
-}
-
-.number{
-  color: #393939;
-  text-align: center;
-  font-size: 400px;  
-}
-
-.main-buttons{
-  display: flex;
-  align-items:center;
-  justify-content: space-evenly;
-  column-gap: 30px;
-}
-
-.btn-plus{
-  width: 56px;
-  height: 58px;
-  border-radius: 27px;
-  background: #0FC50B;
-}
-
-.btn-plus__values{
-  width: 56px;
-  height: 58px;
-  border-radius: 27px;
-  background: #68f64c;
-  font-size: 35px;
+.left{
+  padding: 10px;
+  width: 500px;
+  border-radius: 30px;
+  background-color: green;
   color: white;
 }
 
-.btn-refresh{
-  width: 55px;
-  height: 58px;
-  border-radius: 27px;
-}
-
-.btn-refresh img{
-  display: block;
-
-  margin: auto;
-}
-
-.btn-minus__values{
-  width: 56px;
-  height: 58px;
-  border-radius: 27px;
-  background: #F64C4C;
-  font-size: 35px;
+.right{
+  padding: 10px;
+  width: 500px;
+  border-radius: 30px;
+  background-color: rgb(41, 26, 179);
   color: white;
-}
-
-.footer-logo{
-  color: #9B9DA0;
-  font-family: Aleo;
-  font-size: 54px;
-  font-style: normal;
-  font-weight: 700;
-}
-
-.footer-content{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 240px;
-
-}
-
-.footer-about__link{
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 20px;
-}
-
-.footer-about-item{
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.50);
-  font-family: 'Aleo';
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  
-}
-
-.copyright{
-  margin-left: 35px;
-  color: rgba(0, 0, 0, 0.50);
-  font-family: 'Aleo';
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 700;
 }

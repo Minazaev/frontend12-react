@@ -11,3 +11,21 @@ root.render(
 
 
 reportWebVitals();
+
+// return(
+//     <div className='container p-4'>
+//       <div>
+//         <input type={'checkbox'} checked={check} onChange={checkChange}/>
+//         <input placeholder='text' value={text} onChange={handlerChange}/>
+//         <button onClick={handlerBtn}>add</button>
+//       </div>
+//       {
+//         todos.map(item =>{
+//           return(
+//             <div>
+//               {item.check}{item.text}
+//             </div>
+//           )
+//         })
+//       }
+//     </div>
