@@ -29,3 +29,79 @@ code {
   background-color: rgb(41, 26, 179);
   color: white;
 }
+
+h1{
+  border-bottom: 5px solid #F2F2F2;
+}
+
+.header-text{
+  color: #1477a1;
+  font-family: 'Montserrat';
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.App{
+  padding-top: 53px;
+  margin: 0 auto;
+  max-width: 1150px;
+}
+
+.App input{
+  border: none;
+  outline: none;
+  color: #B4B4B4;
+  font-family: 'Lato';
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.App button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 50px;
+  color: #B4B4B4;
+}
+
+.text-item{
+  display: inline-block;
+  cursor: pointer;
+  flex-direction: column;
+  color: #000;
+  font-family: 'Lato';
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.strike{
+  text-decoration: line-through;
+  color: #069710;
+}
+
+.item-todo{
+  padding: 14px 0;
+  width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  margin-top: 15px;
+  font-size: 24px;
+}
+.item-delete{
+  display: inline-block;
+  cursor: pointer;
+  float: right;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 50%;
+  position: relative;
+  left: -4px;
+  bottom: 5px;
+  background-color: red;
+  color: rgb(255, 255, 255);
+}

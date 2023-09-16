@@ -1,65 +1,55 @@
 import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ToDoForm from './components/ToDoForm';
+import ToDo from './components/ToDo';
 
 function App() {
 
-  const [todos, setTodos] = useState([
-    {
-      text: 'Html',
-    },
-    {
-      text: 'Html',
-    },
-    {
-      text: 'Html',
-    }
-  ])
+  const [todos, setTodos] = useState([])
 
-  const [text, setText] = useState('')
-  const [check, checkChange] = useState()
-
-
-  function handlerChange(e){
-    setText(e.target.value)
-  }
-
-  function handlerBtn(){
-    setTodos([
-      ...todos,
-      {
-        text: text
+  const addTask = (text) => {
+    if(text){
+      const newItem = {
+        id: Math.random().toString(32).substr(2, 9),
+        task: text,
+        complete: false
       }
-    ])
-    setText('')
+      setTodos([...todos, newItem])      
+    }
   }
 
-  function handlerCheck(){
-    if(checkChange == true){
-    }
+  const removedTask = (id) => {
+    setTodos([...todos.filter(todo => todo.id != id)])
+  }
+
+  const changeTask = (id) => {
+    setTodos([
+      ...todos.map(todo => todo.id === id ? {
+        ...todo,
+        complete: !todo.complete
+      }: {...todo})
+    ])
   }
 
   return(
-    <div className='container p-4'>
-      <div>
-        <input type={'checkbox'} checked={check} onChange={handlerCheck}/>
-        <input placeholder='text' value={text} onChange={handlerChange}/>
-        <button onClick={handlerBtn}>add</button>
-      </div>
-      {
-        todos.map(item =>{
-          return(
-            <div>
-              {item.text}
-            </div>
-          )
-        })
-      }
+    <div className='App'>
+      <header>
+        <h1 className='header-text'>Количество задач № {todos.length}</h1>
+      </header>
+      {todos.map((todo, index) => {
+        return(
+          <ToDo
+          todo={todo}
+          key={todo.id}
+          toggleTask={changeTask}
+          removedTask={removedTask}/>
+        )
+      })}
+      <ToDoForm addTask={addTask}/>
     </div>
     
   )
-
-  
 }
 
 export default App;
