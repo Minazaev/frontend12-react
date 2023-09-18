@@ -1,38 +1,11 @@
-import { useState } from "react"
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function ToDoForm({addTask}) {
-  const [text, setText] = useState("")
+function App() {
 
-  const handlerChange = (e) => {
-    setText(e.target.value)
-  }
-
-  const handlerSubmit = (e) => {
-    e.preventDefault()
-    addTask(text)
-    setText('')
-  }
-
-  const handlerPress = (e) => {
-    if(e.key === 'Enter'){
-        handlerSubmit(e)
-    }
-  }
-
-  return (
-    <form onClick={handlerSubmit}>
-        <input
-            value={text}
-            type='text'
-            onKeyDown={handlerPress}
-            onChange={handlerChange}
-            placeholder='Add task...'
-        />
-        <button>
-            +
-        </button>
-    </form>
+  return(
+    <div></div>
   )
 }
 
-export default ToDoForm; 
+export default App;

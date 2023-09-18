@@ -2,30 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const reducer = (state, action) => {
+    return 'expo'
+}
+
+const store = createStore(reducer)
+
 root.render(
-    <App />
+    <Provider store={store}>
+        <App />
+    </Provider>
 );
 
-
-reportWebVitals();
-
-// return(
-//     <div className='container p-4'>
-//       <div>
-//         <input type={'checkbox'} checked={check} onChange={checkChange}/>
-//         <input placeholder='text' value={text} onChange={handlerChange}/>
-//         <button onClick={handlerBtn}>add</button>
-//       </div>
-//       {
-//         todos.map(item =>{
-//           return(
-//             <div>
-//               {item.check}{item.text}
-//             </div>
-//           )
-//         })
-//       }
-//     </div>

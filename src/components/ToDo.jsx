@@ -1,16 +1,14 @@
+import { useSelector } from "react-redux";
 
-function ToDo({ todo, toggleTask, removedTask }) {
-  return(
-    <div key={todo.id} className='item-todo'>
-        <div className={todo.complete ? 'text-item strike' : 'text-item'}             
-        onClick={() => toggleTask(todo.id)}>
-            {todo.task}
+
+function ToDo() {
+    let text = useSelector(state => state)
+
+    return(
+        <div>
+            {text}
         </div>
-        <div className="item-delete" onClick={() => removedTask(todo.id)}>
-            X
-        </div>
-    </div>
-  )
+    )
 }
 
 export default ToDo;
