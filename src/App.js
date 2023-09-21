@@ -1,12 +1,39 @@
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
-import ToDo from './components/ToDo'
+
+
 
 function App() {
-  const textHead = 'Expovision'
+
+  const todos = useSelector(state => state);
+
+  const dispatch = useDispatch()
+
+  function deleteTodo(id){
+    dispatch({
+      type: 'DELETE',
+      payload: id
+    })
+  }
+
   return(
-    <div>
-      <ToDo/>
-    </div>
+    
+      todos.map((item, index) => {
+        return(
+          
+          <div className='todos'>
+            <div>
+              <input type='checkbox' checked={item.done}/>
+            </div>
+            <div className='text'>
+              {item.text}
+            </div>
+            <div>
+              <button onClick={() => deleteTodo(index)} className='btn-delete'>x</button>
+            </div>
+          </div>
+        )
+      })
   )
 }
 

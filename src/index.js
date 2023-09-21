@@ -8,8 +8,33 @@ import { createStore } from 'redux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const reducer = (state, action) => {
-    return 'expo'
+const initialState = [
+    {
+        text: "react",
+        done: false
+    },
+    {
+        text: "js",
+        done: false
+    },
+    {
+        text: "html",
+        done: false
+    }
+]
+
+const reducer = (state = initialState, action) => {
+    switch(action.type){
+        case 'DELETE' :
+            return state.filter((item, index) => {
+                if(action.payload !== index){
+                    return true
+                }
+            })
+
+            default:
+                return state
+    }
 }
 
 const store = createStore(reducer)
